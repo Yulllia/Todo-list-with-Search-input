@@ -10,12 +10,14 @@ import {
 } from "./todoInput";
 
 const todoInputWrapper = document.querySelector(".form-position");
-const { todoInput, todoButton } = getTodoInputItems(todoInputWrapper);
+const { todoInput, todoButton, todoSearch } =
+  getTodoInputItems(todoInputWrapper);
 const todoList = document.querySelector(".todo-list");
 
 // document.addEventListener("DOMContentLoaded", onDOMLoaded);
 todoInput.addEventListener("input", () => validateTodoInput(todoInputWrapper));
 todoButton.addEventListener("click", addTodo);
+todoSearch.addEventListener("keyup", searchTodos);
 document.addEventListener("DOMContentLoaded", onDOMLoaded);
 
 function onDOMLoaded() {
@@ -40,4 +42,17 @@ function addTodo(event) {
   todoList.appendChild(todoItem);
 
   clearTodoInput(todoInputWrapper);
+}
+
+function searchTodos(e) {
+  const term = e.target.value.toLowerCase();
+  let lis = document.getElementsByTagName("li");
+  Array.from(lis).forEach((todo) => {
+    const todoElement = todo.firstElementChild.textContent;
+    if (todoElement.toLowerCase().indexOf(term) != -1) {
+      todo.style.display = "flex";
+    } else {
+      todo.style.display = "none";
+    }
+  });
 }

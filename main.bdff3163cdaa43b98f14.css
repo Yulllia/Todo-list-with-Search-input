@@ -178,6 +178,7 @@ input::placeholder {
   font-size: 1rem;
   background-color: #582f20;
 }
+
 @media screen and (max-width: 720px) {
   .todo-search-wrapper {
     width: 100%;
@@ -186,6 +187,7 @@ input::placeholder {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 485px) {
   .main-title {
     font-size: 1rem;

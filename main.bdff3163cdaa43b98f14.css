@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --green: rgb(73, 204, 73);
+  --lightgrey: #668f8f;
+  --pink: #990066;
+  --grey: #ccccff;
+  --disabled: #bfbfbf;
+}
+body {
+  background-color: #6eaab8;
+  color: white;
+  font-family: "Poppins",sans-serif;
+  min-height: 100vh;
+  font-size: 10px;
+}
+
+header {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--lightgrey);
+  padding: 2rem;
+}
+header h1 {
+  margin-right: 5rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input::placeholder {
+  color: rgb(76, 111, 106);
+  font-size: 1rem;
+}
+.input-lister {
+  width: 40%;
+  outline: none;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px rgb(80, 102, 121);
+  padding-left: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.todo-wrapper {
+  background-color: white;
+  width: 61%;
+  min-height: 10rem;
+  margin: 2rem auto;
+  border: 2px solid #588999;
+}
+.todo-search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+}
+.form-position {
+  display: flex;
+}
+.title-forms {
+  color: black;
+  display: block;
+  padding: 1rem 0.5rem 0rem 1.5rem;
+  font-size: 1.5rem;
+}
+.input-additems {
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 1rem 1rem 0 1.5rem;
+  padding-left: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s all;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.input-additems:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(103, 98, 98);
+}
+
+.submit-button {
+  padding: 1.2rem;
+  height: 3.2rem;
+  margin-top: 1rem;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.submit-button :focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.submit-button :hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.submit-button :active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.todo-container {
+  margin-top: 5rem;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #8384a9;
+  box-shadow: 2px 1px #cfbdbd;
+  width: 100%;
+}
+
+.todo-text {
+  font-size: 1.5rem;
+  flex: 1;
+}
+.submit-button_disabled {
+  pointer-events: none;
+  color: var(--disabled);
+}
+.todo-remove-button {
+  background: var(--orange);
+  color: rgb(184, 86, 86);
+  border: 1px solid rgb(184, 86, 86);
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #582f20;
+}
+
+@media screen and (max-width: 720px) {
+  .todo-search-wrapper {
+    width: 100%;
+  }
+  .todo-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .main-title {
+    font-size: 1rem;
+  }
+  .input-lister {
+    width: 7rem;
+  }
+}
+

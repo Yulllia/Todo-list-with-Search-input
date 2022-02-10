@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --green: rgb(73, 204, 73);
   --lightgrey: #668f8f;
@@ -11,11 +10,10 @@
   --grey: #ccccff;
   --disabled: #bfbfbf;
 }
-
 body {
   background-color: #6eaab8;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins",sans-serif;
   min-height: 100vh;
   font-size: 10px;
 }

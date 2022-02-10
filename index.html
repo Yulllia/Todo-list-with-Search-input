@@ -24,30 +24,37 @@
   </head>
   <body>
     <header>
-      <h1>Todo List</h1>
+      <div class="todo-search-wrapper">
+        <h1 class="main-title">Item Lister</h1>
+        <input
+          class="input-lister"
+          type="text"
+          id="serach"
+          name="serach"
+          placeholder="Search items..."
+        />
+      </div>
     </header>
-
     <main>
-      <form>
-        <div class="todo-header">
-          <div class="todo-input-wrapper">
-            <input type="text" class="todo-input" />
-            <button class="todo-button" type="submit">
-              <i class="fas fa-plus"></i>
+      <div class="todo-wrapper">
+        <form>
+          <h2 class="title-forms">Add Items</h2>
+          <div class="form-position">
+            <input
+              class="input-additems"
+              type="text"
+              id="additems"
+              name="additems"
+            />
+            <button class="submit-button" type="submit" value="Submit">
+              Submit
             </button>
-            <span class="todo-helper">Minimum length is 3 characters</span>
           </div>
-          <div class="todo-select-wrapper">
-            <select name="todos" class="todo-select">
-              <option value="all" class="all-selector">All</option>
-              <option value="completed">Completed</option>
-              <option value="uncompleted">Uncompleted</option>
-            </select>
-          </div>
+        </form>
+        <h2 class="title-forms">Items</h2>
+        <div class="todo-container">
+          <ul class="todo-list"></ul>
         </div>
-      </form>
-      <div class="todo-container">
-        <ul class="todo-list"></ul>
       </div>
     </main>
   </body>

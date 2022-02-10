@@ -25,10 +25,10 @@
     "css-loader": "^6.6.0",
     "eslint": "^8.8.0",
     "html-loader": "^3.1.0",
-    "husky": "^7.0.0",
+    "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
     "mini-css-extract-plugin": "^2.5.3",
-    "prettier": "^2.5.1",
+    "prettier": "2.5.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2",
@@ -41,4 +41,5 @@
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
   }
+  
 }

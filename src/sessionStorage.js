@@ -1,7 +1,7 @@
-export const TODOS = "todos";
+const TODOS = "todos";
 
-export function removeTodoFromSStorage(todoItem, store = TODOS) {
-  let todos = getTodosFromSStorage(store);
+export function removeTodoFromSStorage(todoItem) {
+  let todos = getTodosFromSStorage();
 
   const todoText = Array.from(todoItem.childNodes).find((node) =>
     node.classList.contains("todo-text")
@@ -9,7 +9,7 @@ export function removeTodoFromSStorage(todoItem, store = TODOS) {
 
   if (todoText) {
     const filtredTodos = todos.filter((item) => item !== todoText.innerText);
-    sessionStorage.setItem(store, JSON.stringify(filtredTodos));
+    sessionStorage.setItem(TODOS, JSON.stringify(filtredTodos));
   }
 }
 
@@ -19,7 +19,7 @@ export function saveTodoToSStorage(todo) {
   sessionStorage.setItem(TODOS, JSON.stringify(todos));
 }
 
-export function getTodosFromSStorage(store = TODOS) {
-  const storageTodos = sessionStorage.getItem(store);
+export function getTodosFromSStorage() {
+  const storageTodos = sessionStorage.getItem(TODOS);
   return storageTodos ? JSON.parse(storageTodos) : [];
 }
